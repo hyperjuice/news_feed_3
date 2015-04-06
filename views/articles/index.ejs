@@ -6,6 +6,9 @@
 <% articlesList.forEach(function(article) { %>
 <div>
   <a href="/articles/<%= article.id %>"><%= article.title %></a>
+  <form method="POST" action="/articles/<%= article.id %>?_method=DELETE">
+  	<button>End it all</button>
+  </form>
   <div>
     <%= article.content %>
   </div>
